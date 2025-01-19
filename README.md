@@ -36,55 +36,6 @@ Set Up Your Environment
 
 Replace YOUR_PERSONAL_ACCESS_TOKEN in the code with your GitLab personal access token.
 
-Functions
-
-1. Fetch Projects
-
-Fetches all projects accessible by your account.
-
-import { fetchProjects } from './path-to-file';
-
-(async () => {
-const projects = await fetchProjects();
-console.log(projects);
-})();
-
-2. Fetch Merge Requests
-
-Fetches merge requests for a specific project.
-
-import { fetchMergeRequests } from './path-to-file';
-
-(async () => {
-const projectId = '<PROJECT_ID>'; // Replace with your project ID
-const mergeRequests = await fetchMergeRequests(projectId);
-console.log(mergeRequests);
-})();
-
-3. Fetch Review Comments
-
-Fetches review comments for a specific merge request.
-
-import { fetchReviewComments } from './path-to-file';
-
-(async () => {
-const projectId = '<PROJECT_ID>'; // Replace with your project ID
-const mergeRequestId = '<MERGE_REQUEST_ID>'; // Replace with your merge request ID
-const comments = await fetchReviewComments(projectId, mergeRequestId);
-console.log(comments);
-})();
-
-Error Handling
-
-Ensure you handle errors in your application to manage API request failures gracefully:
-
-try {
-const data = await fetchProjects();
-console.log(data);
-} catch (error) {
-console.error('Error fetching projects:', error);
-}
-
 GitLab API Documentation
 
 For more details on the GitLab API endpoints, refer to the official documentation:
